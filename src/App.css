@@ -1,0 +1,83 @@
+body {
+  background-color: azure;
+}
+.section {
+  margin:5rem ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+}
+.category{
+  width: 50%;
+  margin-top: 2rem;
+  display: grid;
+  place-items: center;
+  
+}
+.category button{
+  border: none;
+  background-color: transparent;
+  color: rgb(226, 159, 82);
+  font-size: 1.3rem;
+  padding: 3px 5px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+.category button:hover{
+  background-color: rgb(226, 159, 82);
+  color: #fff;
+  cursor: pointer;
+  
+}
+.items{
+  margin-top: 5rem;
+  display: grid;
+  row-gap: 3em;
+  column-gap: 2em;
+  place-items: center;
+}
+.item{
+  display: grid;
+  row-gap: 1em;
+  column-gap: 1em;
+  font-size: 1.5rem;
+  place-items: center;
+}
+
+.left img{
+  width: 15rem;
+  height: 15rem;
+  border: rgb(226, 159, 82) 5px solid;
+  border-radius: 3px;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px;
+  text-transform: capitalize;
+}
+.right p{
+  margin: 7px 10px;
+}
+.price{
+  color: rgb(226, 159, 82);
+}
+.right p{
+  text-align: justify;
+}
+@media (min-width: 1500px) {
+  .items { grid-template-columns: repeat(2, 1fr);}
+  
+}
+@media (min-width: 600px) {
+  .category { grid-template-columns: repeat(4, 1fr)};
+}
+@media (min-width: 600px) {
+  .item{grid-template-columns: repeat(2, 1fr)}
+}
+@media (max-width: 600px) {
+  .left img{width: 25rem; height: 25rem;}
+}
